@@ -56,10 +56,6 @@ data(yrbss)
 There are observations on 13 different variables, some categorical and some 
 numerical. The meaning of each variable can be found by bringing up the help file:
 
-```{r help-nc}
-?yrbss
-```
-
 
 1.  What are the cases in this data set? How many cases are there in our sample?
 
@@ -151,9 +147,9 @@ significant? In order to answer this question we will conduct a hypothesis test.
 compute the group sizes with the `summarize` command above by defining a new variable
 with the definition `n()`.
 
-As the sample size is large and assuming the samples are independent its a normal distribution
-
 **Answer**
+
+As the sample size is large and assuming the samples are independent its a normal distribution
 
 ```{r by-count}
 yrbss %>%
@@ -167,9 +163,9 @@ who exercise at least times a week and those who don't.
 
 **Answer**
 
-H<sub>0</sub> There is no difference in average weights among those who exercise at least a week and those who don't
+H<sub>0</sub> :  μ<sub>exercise</sub> - μ<sub>no exercise </sub> = 0
 
-H<sub>1</sub> There is difference in average weights among those who exercise at least a week and those who don't
+H<sub>1</sub> :  μ<sub>exercise</sub> - μ<sub>no exercise </sub> ≠ 0
 
 Next, we will introduce a new function, `hypothesize`, that falls into the `infer` 
 workflow. You will use this method for conducting hypothesis tests. 
